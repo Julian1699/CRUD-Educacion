@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>CRUD-JAVA-SPRINGBOOT-ORACLE</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container mt-4">
+	<a th:href="@{/new_Curso}" class="btn btn-primary">Agrega Nuevo Curso</a>
+	<a th:href="@{/listar_Curso}" class="btn btn-secondary">Listar Los Cursos</a>
+	<br> <br>
+		<table class = "table">
+			<thead>
+				<tr>
+					<td>ID</td>
+					<td>NOMBRES</td>
+					<td>TELEFONO</td>
+					<td>ACCIONES</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="curso:${cursos}">
+					<td th:text="${curso.id}"></td>
+					<td th:text="${curso.name}"></td>
+					<td th:text="${curso.telefono}"></td>
+					<td>
+					<a th:href="@{/editar_Curso/}+${curso.id}" class="btn btn-warning">Editar</a>
+					<a th:href="@{/eliminar_Curso/}+${curso.id}" class="btn btn-danger">Eliminar</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+<body>
+	<div class="container mt-4">
+	<a th:href="@{/new_Alumno}" class="btn btn-primary">Agrega Nuevo Alumno</a>
+	<a th:href="@{/listar_Alumno}" class="btn btn-secondary">Listar Los Alumnos</a>
+	<br> <br>
+		<table class = "table">
+			<thead>
+				<tr>
+					<td>ID</td>
+					<td>NOMBRES</td>
+					<td>TELEFONO</td>
+					<td>ACCIONES</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="alumno:${alumnos}">
+					<td th:text="${alumno.id}"></td>
+					<td th:text="${alumno.name}"></td>
+					<td th:text="${alumno.telefono}"></td>
+					<td>
+					<a th:href="@{/editar_Alumno/}+${alumno.id}" class="btn btn-warning">Editar</a>
+					<a th:href="@{/eliminar_Alumno/}+${alumno.id}" class="btn btn-danger">Eliminar</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+<body>
+	<div class="container mt-4">
+	<a th:href="@{/new_Profesor}" class="btn btn-primary">Agrega Nuevo Profesor</a>
+	<a th:href="@{/listar_Profesor}" class="btn btn-secondary">Listar Los Profesor</a>
+	<br> <br>
+		<table class = "table">
+			<thead>
+				<tr>
+					<td>ID</td>
+					<td>NOMBRES</td>
+					<td>TELEFONO</td>
+					<td>ACCIONES</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="profesor:${profesors}">
+					<td th:text="${profesor.id}"></td>
+					<td th:text="${profesor.name}"></td>
+					<td th:text="${profesor.telefono}"></td>
+					<td>
+					<a th:href="@{/editar_Profesor/}+${profesor.id}" class="btn btn-warning">Editar</a>
+					<a th:href="@{/eliminar_Profesor/}+${profesor.id}" class="btn btn-danger">Eliminar</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
