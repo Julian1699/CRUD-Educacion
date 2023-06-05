@@ -1,3 +1,2 @@
-# intento
-intento
-Este es un repositorio de prueba, es mi primer push, parece que salio bien.
+#CRUD-SpringBoot-REST-SQL
+Se realizó un crud con el framework llamado SpringBoot de JAVA, en el cual se implementó un API con la arquitectura REST.
