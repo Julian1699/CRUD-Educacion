@@ -2,9 +2,9 @@
 
 En este proyecto, se busca desarrollar una API REST utilizando Spring para gestionar las entidades "Alumno", "Profesor" y "Curso". Cada entidad tendrá los siguientes atributos:
 
-Alumno: id, nombre, telefono.
-Profesor: id, nombre, telefono.
-Curso: id, nombre, telefono.
+- Alumno: id, nombre, telefono.
+- Profesor: id, nombre, telefono.
+- Curso: id, nombre, telefono.
 
 La API REST proporcionará las siguientes funcionalidades:
 
